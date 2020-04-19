@@ -1,0 +1,46 @@
+@import './palette.scss';
+@import './components/option/option.scss';
+
+.app-container {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header-container {
+  padding: 10px;
+  background-color: $primary;
+  flex: 1;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.body-container {
+  background-color: lightslategrey;
+  display: flex;
+  flex-direction: row;
+  flex: 9;
+}
+
+.sidebar-container {
+  background-color: $secundary;
+  flex: 1;
+  max-width: 200px;
+}
+
+.content-container {
+  background-color: $white;
+  flex: 4;
+}
+
+// Container 
+//  display: flex
+//  flex-direction: row o column
+//  justify-content: space-between space-around
+//  aligns-item: center
+
