@@ -1,5 +1,12 @@
+// Colors
 @import './palette.scss';
+
+// Components
 @import './components/option/option.scss';
+@import './components/button/button.scss';
+
+// Antd 
+@import '~antd/dist/antd.css';
 
 .app-container {
   background-color: lightblue;
@@ -21,14 +28,14 @@
 
 
 .body-container {
-  background-color: lightslategrey;
+  // background-color: lightslategrey;
   display: flex;
   flex-direction: row;
   flex: 9;
 }
 
 .sidebar-container {
-  background-color: $secundary;
+  background-color: $graylight;
   flex: 1;
   max-width: 200px;
 }
@@ -36,6 +43,29 @@
 .content-container {
   background-color: $white;
   flex: 4;
+  padding: 20px;
+}
+
+.gastos-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  &__header{
+  }
+  &__subheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__total {
+      font-weight: bold;
+      color: $graylight-2;
+    }
+  }
+  &__body {
+    flex: 1;
+    padding: 10px 0px;
+  }
 }
 
 // Container 

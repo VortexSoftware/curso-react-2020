@@ -5,12 +5,15 @@ import SidebarContainer from '../sidebar/SidebarContainer';
 import ContentContainer from '../content/ContentContainer';
 
 class AppContainer extends Component {
-  state = {
-    optionSelected: ''
+  constructor(props) {
+    super(props)
+    this.state = {
+        optionSelected: ''
+    }
   }
 
   handleSelectOption = (optionSelected) => {
-    this.setState({optionSelected})
+    this.setState({ optionSelected } )
   }
 
   render() {
@@ -19,7 +22,7 @@ class AppContainer extends Component {
         <HeaderContainer />
         <div className='body-container'>
           <SidebarContainer optionSelected={this.state.optionSelected} onSelectOption={this.handleSelectOption}/>
-          <ContentContainer optionSelected={this.state.optionSelected}/>
+          <ContentContainer optionSelected={this.state.optionSelected} />
         </div>
       </div>
   
@@ -41,4 +44,6 @@ export default AppContainer;
 //  containers
 // productos
 // gastos
+
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTU4NzU4NDMzNSwiZXhwIjoxNjE5MTIwMzM1fQ.cEox78BFtWQeClWRZfCQPsdK0RGyINELgQyPYiNDIMc
 

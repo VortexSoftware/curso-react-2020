@@ -1,8 +1,12 @@
 .option {
-    background-color: maroon;
+    // background-color: maroon;
+    cursor: pointer;
     padding: 10px;
+    color: $white;
     &--selected {
-        background-color: green;
+        color: $white;
+        font-weight: bold;
+        background-color: $black;
     }
 
 }
