@@ -45,5 +45,4 @@ export default AppContainer;
 // productos
 // gastos
 
-// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTU4NzU4NDMzNSwiZXhwIjoxNjE5MTIwMzM1fQ.cEox78BFtWQeClWRZfCQPsdK0RGyINELgQyPYiNDIMc
-
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTU4Nzc0MjI0MCwiZXhwIjoxNjE5Mjc4MjQwfQ.CwzpF1OszuhA4MGKOzcLD9YeBhGrSuOfIR4Zgi6JLf8
