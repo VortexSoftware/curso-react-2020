@@ -1,0 +1,7 @@
+const SELECT_VIEW = 'SELECT_VIEW';
+const HANDLE_MODAL = 'HANDLE_MODAL';
+
+export default {
+    SELECT_VIEW,
+    HANDLE_MODAL
+}

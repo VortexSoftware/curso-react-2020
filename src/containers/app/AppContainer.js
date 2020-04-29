@@ -3,34 +3,34 @@ import '../../App.scss';
 import HeaderContainer from '../header/HeaderContainer';
 import SidebarContainer from '../sidebar/SidebarContainer';
 import ContentContainer from '../content/ContentContainer';
+import ModalContainer from '../modal/ModalContainer';
+import { connect } from 'react-redux';
+
+const mapStateToProps = (state) => ({
+  showModal: state.appReducer.showModal
+})
+
+const mapDispatchToProps = {
+
+}
 
 class AppContainer extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-        optionSelected: ''
-    }
-  }
-
-  handleSelectOption = (optionSelected) => {
-    this.setState({ optionSelected } )
-  }
-
   render() {
     return (
       <div className='app-container'>
         <HeaderContainer />
         <div className='body-container'>
-          <SidebarContainer optionSelected={this.state.optionSelected} onSelectOption={this.handleSelectOption}/>
-          <ContentContainer optionSelected={this.state.optionSelected} />
+          <SidebarContainer />
+          <ContentContainer />
         </div>
+        {this.props.showModal && <ModalContainer />}
       </div>
   
     )
   }
 }
 
-export default AppContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);
 
 // first-functionality
 // containers

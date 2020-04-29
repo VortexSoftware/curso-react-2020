@@ -1,18 +1,19 @@
-import React, { PureComponent, Component } from 'react'
+import React, { Component } from 'react'
 import GastosContainer from '../gastos/GastosContainer'
+import { connect } from 'react-redux'
 
-export default class ContentContainer extends Component {
+const mapStateToProps = (state) => ({
+    view: state.appReducer.view
+})
+
+const mapDispatchToProps = {
+
+}
+
+class ContentContainer extends Component {
     
-    shouldComponentUpdate(nextProps) {
-        if(nextProps.optionSelected !== this.props.optionSelected) {
-            return true
-        }
-
-        return false
-    }
-
     renderView = () => {
-        switch(this.props.optionSelected) {
+        switch(this.props.view) {
             case 'Gastos':
                 return <GastosContainer /> 
             case 'Productos':
@@ -30,3 +31,5 @@ export default class ContentContainer extends Component {
         )
     }
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContentContainer)

@@ -1,10 +1,21 @@
 import React, { Component } from 'react'
 import Option from '../../components/option'
+import { selectView } from '../../reducers/app/appActions'
+import { connect } from 'react-redux'
+
+const mapStateToProps = (state) => ({
+
+})
+
+const mapDispatchToProps = {
+    selectView
+}
 
 class SidebarContainer extends Component {
 
     handleSelect = (optionSelected) => {
-        this.props.onSelectOption(optionSelected)
+        // this.props.onSelectOption(optionSelected)
+        this.props.selectView(optionSelected)
     }
 
     render() {
@@ -19,4 +30,4 @@ class SidebarContainer extends Component {
     }
 }
 
-export default SidebarContainer
+export default connect(mapStateToProps, mapDispatchToProps)(SidebarContainer)
